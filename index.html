@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="ru" class="pointerfocus"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <meta name="viewport" content="width=device-width">
+    <title>Задачи 1</title>
+
+
+    
+	<style>
+
+.link__inner {
+    color: inherit
+}
+
+
+.popup2__tail {
+    position: absolute;
+    z-index: 1;
+    width: 10px;
+    height: 10px
+}
+
+.spin2_size_l {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+    line-height: 34px;
+    background-position: -2px -106px
+}
+
+.f-layout__header {
+    font-weight: 400
+}
+
+.b-link:link {
+    color: #1a3dc1
+}
+
+
+
+.wiki-doc .wiki-cut__chead {
+    position: relative;
+    padding-left: 16px
+}
+
+.wiki-doc .wiki-cut__chead .link_pseudo_yes .link__inner {
+    border-bottom: 1px dotted
+}
+
+.wiki-doc .wiki-cut__cbody {
+    display: none
+}
+
+.wiki-doc .wiki-cut__ico {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    margin-top: 6px;
+    margin-left: -16px;
+}
+
+.f-captioned-list__item {
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 13px;
+    line-height: 17px;
+    padding: 3.5px 0
+}
+
+.f-captioned-list__caption {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    color: #999
+}
+
+.m-expandable__arrow {
+    display: inline-block;
+    transition: transform .3s ease-out
+}
+
+.f-problem__wiki {
+    margin-top: 6px
+}
+
+
+
+.f-problem-stats__scale {
+    display: -ms-flexbox;
+    display: flex
+}
+
+.f-problem-stats__stat {
+    height: 7px;
+    box-sizing: border-box
+}
+
+.f-problem-stats__stat_type_bad {
+    background-color: #f33
+}
+
+.f-problem-stats__stat_type_norm {
+    background-color: #ef9300
+}
+
+.f-problem-stats__stat_type_excellent {
+    background-color: #049657
+}
+
+.f-problem-stats__stat_type_norm {
+    opacity: .6
+}
+
+.f-problem-stats__stat:first-child {
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px
+}
+
+.f-problem-stats__stat:last-child {
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px
+}
+
+@media print {
+    .f-problem__col {
+        width: inherit;
+        padding-right: inherit
+    }
+}
+
+.staff-pager__list {
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 -2px;
+    font-size: 14px;
+    line-height: 24px;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.f-problems-list__message:empty {
+    display: none
+}
+
+.f-problems-list__list {
+    -ms-flex-positive: 1;
+    flex-grow: 1
+}
+
+.f-problems-list__message {
+    font-size: 15px;
+    text-align: center
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    font-weight: 400;
+    font-style: normal
+}
+
+.awesome-icon:before {
+    display: inline-block;
+    font: 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.awesome-icon_icon_angle-up:before {
+    content: "\f106"
+}
+
+@font-face {
+    font-family: 'textbook';
+}
+
+.popup2 {
+    position: absolute
+}
+
+.f-layout__header_size_s {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 700
+}
+
+.b-icon {
+    font: 0/0 a;
+    border: 0
+}
+
+.wiki-bold {
+    font-weight: 700
+}
+
+.wiki-doc .wiki-bquot {
+    overflow: auto;
+    margin: 0;
+    padding: .25em .5em;
+    border-left: 2px solid #999;
+    background-color: #eaeaea;
+    background-color: rgba(0,0,0,.08)
+}
+
+.wiki-doc .wiki-formatter {
+    position: relative;
+    display: block;
+    max-width: 100%
+}
+
+.wiki-doc .wiki-formatter_type_inline {
+    display: inline
+}
+
+.wiki-li .wiki-cut {
+    display: inline-block;
+    vertical-align: top
+}
+
+.wiki-li:before {
+    vertical-align: top
+}
+
+.wiki-doc .wiki-list {
+    margin: 0;
+    padding-left: 40px;
+    list-style: disc
+}
+
+.wiki-doc .wiki-list .wiki-list {
+    list-style: circle
+}
+
+.wiki-doc .wiki-list_list-type_decimal {
+    list-style-type: decimal!important
+}
+
+.wiki-doc .wiki-list_type_outline {
+    list-style: none!important
+}
+
+.wiki-doc .wiki-psep {
+    padding-top: 10px
+}
+
+.wiki-p {
+    word-wrap: break-word
+}
+
+.wiki-underline {
+    text-decoration: underline
+}
+
+.b-page-code_theme_github .hljs {
+    display: block;
+    overflow-x: auto;
+    padding: .5em;
+    color: #333;
+    background: #f8f8f8
+}
+
+.b-page-code_theme_github .hljs-comment {
+    color: #998;
+    font-style: italic
+}
+
+.b-page-code_theme_github .hljs-keyword {
+    color: #333;
+    font-weight: 700
+}
+
+.b-page-code_theme_github .hljs-literal,.b-page-code_theme_github .hljs-number {
+    color: teal
+}
+
+.b-page-code_theme_github .hljs-string {
+    color: #d14
+}
+
+.b-page-code_theme_github .hljs-title {
+    color: #900;
+    font-weight: 700
+}
+
+.b-page-code_theme_github .hljs-class .hljs-title {
+    color: #458;
+    font-weight: 700
+}
+
+.b-page-code_theme_github .hljs-built_in {
+    color: #0086b3
+}
+
+.f-island_theme_normal {
+    margin-left: -24px;
+    margin-right: -24px;
+    padding: 24px 24px 32px;
+    border: 1px solid transparent
+}
+
+
+.f-island_theme_normal+.f-island_theme_normal {
+    border-top-color: #e6e6e6
+}
+
+.f-captioned-list_size_m .f-captioned-list__item {
+    font-size: 15px;
+    line-height: 19px
+}
+
+.f-problem__crop-trigger {
+    margin-left: 4px;
+    transform-origin: center 53%
+}
+
+.m-expandable__cropper {
+    overflow: hidden
+}
+
+.m-expandable__trigger,.tooltip_view_classic {
+    cursor: pointer
+}
+
+.f-problems-search__filter-clear:not(:hover) {
+    opacity: .3
+}
+
+.popup2_theme_normal.popup2_js_inited {
+    display: block
+}
+
+.popup2_theme_normal {
+    visibility: hidden;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,.06);
+    animation-duration: .1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    margin: -99999px 0 0 -99999px
+}
+
+.popup2_theme_normal .popup2__tail:before {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 0;
+    left: 0;
+    content: '';
+    border: 1px solid transparent;
+    border-bottom-color: rgba(0,0,0,.06);
+    border-left-color: rgba(0,0,0,.06)
+}
+
+.popup2_theme_normal .popup2__tail:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 1px;
+    left: 1px;
+    content: '';
+    background-image: linear-gradient(to top right,#fff 50%,transparent 50%)
+}
+
+.popup2_theme_normal:before {
+    z-index: -1
+}
+
+.popup2_theme_normal:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    border-radius: .1px;
+    box-shadow: 0 10px 20px -5px rgba(0,0,0,.4);
+    background: #fff
+}
+
+.wiki-doc {
+    line-height: 20px;
+    font-size: 15px
+}
+
+.wiki-doc,.wiki-doc .wiki-p {
+    position: relative
+}
+
+.wiki-cut {
+    max-width: 100%
+}
+
+.b-page-code_inline_yes {
+    display: inline;
+    font-size: 0;
+    margin-right: 3px
+}
+
+.b-page-code_inline_yes .b-page-code__code {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    overflow: visible;
+    overflow-x: auto;
+    font-family: Menlo,Consolas,'Ubuntu Mono','Liberation Mono','Courier New',monospace;
+    font-size: 14px;
+    display: inline;
+    padding: .15em
+}
+
+.b-page-code_inline_yes .b-page-code__code.no-highlight {
+    background: #f6f5f3;
+    color: #000;
+    padding: .15em 7px
+}
+
+.b-page-code_multiline_yes {
+    font-size: 14px;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.b-page-code_multiline_yes .b-page-code__line-numbers {
+    text-align: right;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    display: -ms-flexbox!important;
+    display: flex!important;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    white-space: normal;
+    border-right: 1px solid #999
+}
+
+.b-page-code_multiline_yes .b-page-code__code.no-highlight {
+    background: #f6f5f3;
+    color: #000
+}
+
+.b-page-code_multiline_yes .b-page-code__code {
+    overflow: visible;
+    overflow-x: auto;
+    word-break: normal;
+    word-wrap: normal
+}
+
+.b-page-code_multiline_yes .b-page-code__empty-line-numbers {
+    padding: 0
+}
+
+.b-page-code_multiline_yes .b-page-code__code,.b-page-code_multiline_yes .b-page-code__line-numbers,.b-page-code_multiline_yes .b-page-code__pre {
+    font-family: Menlo,Consolas,'Ubuntu Mono','Liberation Mono','Courier New',monospace;
+    font-size: 14px
+}
+
+.b-page-code_multiline_yes .b-page-code__code.no-highlight {
+    padding: .5em
+}
+
+.b-page-code_multiline_yes .b-page-code__pre {
+    margin: 0
+}
+
+.m-expandable_animated_yes .m-expandable__cropper {
+    transition: height .3s ease
+}
+
+.tooltip_view_classic.tooltip_theme_white.popup2_theme_normal {
+    color: #000;
+    border: 1px solid;
+    border-color: rgba(0,0,0,.1);
+    background-color: #fff;
+    background-clip: padding-box
+}
+
+.tooltip_view_classic.tooltip_theme_white.popup2_theme_normal:before {
+    background: 0 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,.25)
+}
+
+.tooltip_size_m .tooltip__content {
+    padding: 9px 10px;
+    font-size: 15px;
+    line-height: 14px
+}
+
+.tooltip_size_m .popup2__tail {
+    width: 12px;
+    height: 12px
+}
+
+.link {
+    text-decoration: none;
+    outline: 0;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation
+}
+
+.link {
+    cursor: pointer
+}
+
+.link_theme_pseudo {
+    color: #04b
+}
+
+.link_theme_pseudo .link__inner {
+    border-bottom: 1px dotted
+}
+
+.wiki-doc .wiki-cut_type_expanded>.wiki-cut__chead .wiki-cut__ico {
+    background-position: 0 -12px
+}
+
+.wiki-doc .wiki-cut_type_expanded>.wiki-cut__cbody {
+    display: block
+}
+
+.f-problem-stats__tooltip .f-captioned-list__item {
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.f-problem-stats__tooltip .f-captioned-list__caption {
+    width: 100px;
+    color: #333
+}
+
+.f-problem-stats__tooltip .f-problem-stats__number_type_bad {
+    font-weight: 700;
+    color: #f33
+}
+
+.f-problem-stats__tooltip .f-problem-stats__number_type_norm {
+    font-weight: 700;
+    color: #ef9300
+}
+
+.f-problem-stats__tooltip .f-problem-stats__number_type_excellent {
+    font-weight: 700;
+    color: #049657
+}
+
+.f-problem-stats {
+    font-size: 15px;
+    display: inline-block;
+    cursor: pointer
+}
+
+.f-problem-stats_size_m .f-problem-stats__scale {
+    width: 150px
+}
+
+.f-problem-stats_size_m .f-problem-stats__header {
+    font-weight: 700;
+    margin-bottom: 12px
+}
+
+.staff-pager_size_m .staff-pager__list {
+    font-size: 15px
+}
+
+.f-problems-list__pager {
+    margin-top: 48px
+}
+
+body {
+    font: 13px/17px Arial,Helvetica,sans-serif;
+    position: relative;
+    z-index: 0;
+    margin: 0;
+    padding: 0
+}
+
+
+.f-problem__description {
+    margin-bottom: 16px
+}
+
+
+
+
+.f-problem_theme_wide:not(.s-list__item) {
+    display: -ms-flexbox;
+    display: flex
+}
+
+.f-problem_theme_wide .f-problem__col {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 85%;
+    min-width: 590px;
+    padding: 24px
+}
+
+.f-problem_theme_wide .f-problem__meta {
+    padding-left: 24px;
+    border-left: 1px solid rgba(0,0,0,.1);
+    -ms-flex-positive: 1;
+    /* flex-grow: 1; */
+}
+
+.f-problem_theme_wide .f-problem-stats {
+    margin-bottom: 34px
+}
+
+.f-problems-list {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.f-problems-list__progress {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -19px
+}
+
+.f-page-problems__list {
+    margin: 24px;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+</style>
+
+
+
+</head>
+<body>
+            <div class="f-problems-list f-problems-list_theme_wide f-page-problems__list i-bem f-problems-list_js_inited f-problems-list_first-page f-problems-list_last-page">
+                <div class="f-problems-list__message"></div>
+                <div class="f-problems-list__list">
+                    <div class="f-problem f-problem_link f-problem_theme_wide f-problem_with-complaints-count f-problem_solution-collapsed f-island f-island_theme_normal i-bem f-problem_js_inited" data-bb-cid="c7">
+                        <div class="f-problem__col">
+						<H2>Удалить смайлики вида ":-)))" и ":-((" из сообщения</h2>
+                            
+                            <div class="f-problem__description m-expandable m-expandable_animated_yes i-bem m-expandable_js_inited" data-bem="{&quot;m-expandable&quot;:{}}">
+                                <div class="f-layout__header f-layout__header_size_s m-expandable__trigger f-problem__subheader">
+                                    Описание
+                                    <div class="f-problem__crop-trigger m-expandable__arrow"></div>
+                                </div>
+                                <div class="m-expandable__cropper">
+                                    <div class="f-problem__wiki">
+                                        <div class="wiki-doc wiki-doc_magiclinks_yes i-bem wiki-doc_js_inited">
+                                            <div class="wiki-p">Есть сообщения из соцсети, например:</div>
+                                            <span class="wiki-formatter" style="">
+    <div class="b-page-code b-page-code_multiline_yes i-bem b-page-code_theme_github b-page-code_js_inited" data-bem="{&quot;b-page-code&quot;: {}}">
+
+            <code class="b-page-code__empty-line-numbers hljs"></code>
+
+        <code class="b-page-code__code no-highlight">
+            <pre class="b-page-code__pre">"Я работаю в Яндексе :-)))"
+"везет :-) а я туда собеседование завалил:-(("
+"лол:)"
+"Ааааа!!!!! :-))(())"</pre>
+        </code>
+    </div>
+
+</span>
+                                            <div class="wiki-psep"></div>
+                                            <div class="wiki-p">Хочется удалить из них смайлики, подпадающие под
+                                                регулярку <span class="wiki-formatter wiki-formatter_type_inline" style="">
+    <span class="b-page-code b-page-code_inline_yes i-bem b-page-code_theme_github b-page-code_js_inited" data-bem="{&quot;b-page-code&quot;: {}}">
+        <code class="b-page-code__code no-highlight">":-\)+|:-\(+"</code>
+    </span>
+
+</span> за линейное время. То есть, сделать так:
+                                            </div>
+                                            <span class="wiki-formatter" style="">
+    <div class="b-page-code b-page-code_multiline_yes i-bem b-page-code_theme_github b-page-code_js_inited" data-bem="{&quot;b-page-code&quot;: {}}">
+
+            <code class="b-page-code__empty-line-numbers hljs"></code>
+
+        <code class="b-page-code__code no-highlight">
+            <pre class="b-page-code__pre">"Я работаю в Яндексе "
+"везет  а я туда собеседование завалил"
+"лол:)"
+"Aaaaa!!!!! (())"</pre>
+        </code>
+    </div>
+
+</span>
+                                            <div class="wiki-psep"></div>
+                                            <div class="wiki-p">Опционально можно попросить константу доп. памяти.</div>
+                                        </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="f-problem__solution m-expandable m-expandable_animated_yes i-bem m-expandable_js_inited" >
+                                <div class="f-layout__header f-layout__header_size_s m-expandable__trigger f-problem__subheader">
+                                    Что хотим услышать
+                                    <div class="f-problem__crop-trigger m-expandable__arrow"></div>
+                                </div>
+                                <div class="m-expandable__cropper" style="">
+                                    <div class="f-problem__wiki">
+                                        <div class="wiki-doc wiki-doc_magiclinks_yes i-bem wiki-doc_js_inited">
+                                            <div class="wiki-p">Можно быстро обсудить как это сделать с помощью
+                                                регулярных выражений на любимом языке кандидата или sed. Но требуем
+                                                написать алгоритм руками.
+                                            </div>
+                                            <div class="wiki-psep"></div>
+                                            <div class="wiki-p">Нужен однопроходный алгоритм а-ля поддержание состояния
+                                                автомата, например, текущей длины заматчившегося смайлика.
+                                            </div>
+                                        </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f-problem__meta">
+                            <div class="f-problem__stats">
+                                <div class="f-problem-stats f-problem-stats_size_m i-bem f-problem-stats_js_inited" data-bem="{&quot;f-problem-stats&quot;:{}}">
+                                    <div class="f-problem-stats__header">255 решений</div>
+                                    <div class="f-problem-stats__scale i-bem _popup2-destructor _popup2-destructor_js_inited">
+                                        <div class="f-problem-stats__stat f-problem-stats__stat_type_bad" style="width:38.03921568627451%"></div>
+                                        <div class="f-problem-stats__stat f-problem-stats__stat_type_norm" style="width:32.549019607843135%"></div>
+                                        <div class="f-problem-stats__stat f-problem-stats__stat_type_excellent" style="width:29.411764705882355%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+</body></html>
